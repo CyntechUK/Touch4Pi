@@ -45,7 +45,7 @@ class PiTouch:
     self.bus.write_byte_data(0x40, chan+3, 0 >> 8)
 
 
-  def red(self,light,pad=0):
+  def green(self,light,pad=0):
     #3, 0, 10, 13
     if pad == 0:
       self.light(0x06+(4*3),light)
@@ -62,7 +62,7 @@ class PiTouch:
       self.light(0x06+(4*13),light)
 
 
-  def green(self,light,pad=0):
+  def blue(self,light,pad=0):
     #4, 1, 11, 14
     if pad == 0:
       self.light(0x06+(4*4),light)
@@ -79,7 +79,7 @@ class PiTouch:
       self.light(0x06+(4*14),light)
 
 
-  def blue(self,light,pad=0):
+  def red(self,light,pad=0):
     #5, 2, 12, 15
     if pad == 0:
       self.light(0x06+(4*5),light)
